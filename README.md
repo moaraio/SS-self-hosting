@@ -70,7 +70,7 @@ With the virtual environment activated, install the required Python packages by 
 pip install -r requirements.txt
 ```
 
-This will install `boto3`, `pandas`, `requests`, and `python-dotenv`, which are needed for working with AWS services, handling data, and downloading datasets.
+This will install `boto3`, `pandas`, `requests`, and `python-dotenv`, which are needed for working with AWS services, handling data, and downloading datasets. It will also install `tqdm` which is a helpful import to visualize our progress.
 
 
 ### 4. Creating an IAM User with Correct Permissions
@@ -134,7 +134,7 @@ Make sure to replace your-access-key-id, your-secret-access-key, and other place
 
 ## Downloading and Uploading Data to S3
 
-Once the setup is complete, you can download datasets from Semantic Scholar and upload them to your S3 bucket.
+Once the setup is complete, you can download datasets from Semantic Scholar and upload them to your S3 bucket. 
 
 ### Option A: Programmatic Setup (Recommended)
 The script `download_datasets.py` will automatically check if the bucket exists. If the bucket does not exist, the script will create it for you. This ensures the process is streamlined and ready for downloading the datasets.
