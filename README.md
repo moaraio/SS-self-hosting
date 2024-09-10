@@ -134,7 +134,7 @@ Make sure to replace your-access-key-id, your-secret-access-key, and other place
 
 ## Downloading and Uploading Data to S3
 
-Once the setup is complete, you can download datasets from Semantic Scholar and upload them to your S3 bucket. 
+Once the setup is complete, you can download datasets from Semantic Scholar and upload them to your S3 bucket.
 
 ### Option A: Programmatic Setup (Recommended)
 The script `download_datasets.py` will automatically check if the bucket exists. If the bucket does not exist, the script will create it for you. This ensures the process is streamlined and ready for downloading the datasets.
@@ -147,16 +147,16 @@ python src/download_datasets.py
 This script will:
 
 1. Check if the S3 bucket exists; if not, it will create the bucket and name it based on your .env file.
-2. Download the papers and abstracts datasets from Semantic Scholar.
+2. Download/Stream the papers and abstracts datasets from Semantic Scholar.
 3. Upload these datasets to the specified S3 bucket.
 
 ### Option B: Manual Setup via AWS Management Console
 If you prefer to manually create the S3 bucket, follow these steps:
 
-#### Step 1. Log in to the AWS Management Console.
-#### Step 2. Navigate to S3.
-#### Step 3. Click Create bucket.
-#### Step 4. Name your bucket (e.g., my-semanticscholar-bucket), select a region, and click Create.
+1. Log in to the AWS Management Console.
+2. Navigate to S3.
+3. Click Create bucket.
+4. Name your bucket (e.g., my-semanticscholar-bucket), select a region, and click Create.
 
 #### Important: Once your S3 bucket is ready, ensure the S3_BUCKET_NAME in your .env file matches the name of the bucket you've manually created. After creating the bucket, you must still run the following script to download and upload the datasets to your S3 bucket:
 
