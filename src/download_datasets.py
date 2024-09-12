@@ -53,10 +53,12 @@ def main():
             'x-api-key': api_key
         }
 
-        # Here you can modify which datasets you'd like to download and upload to s3. In this example, we are only working with papers and abstracts datasets.
+        # Here you can modify which datasets you'd like to download and upload to s3.
         dataset_urls = {
             "papers": "https://api.semanticscholar.org/datasets/v1/release/latest/dataset/papers",
-            "abstracts": "https://api.semanticscholar.org/datasets/v1/release/latest/dataset/abstracts"
+            # You can add additonal URLs below such as: 
+            # "abstracts": "https://api.semanticscholar.org/datasets/v1/release/latest/dataset/abstracts",
+            # "tldrs": "https://api.semanticscholar.org/datasets/v1/release/latest/dataset/tldrs",
         }
 
         # Fetch dataset metadata and download files
