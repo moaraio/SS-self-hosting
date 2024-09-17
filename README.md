@@ -40,7 +40,7 @@ SS-self-hosting/
 ### 1. Clone the Repository
 Start by cloning the repository to your local machine:
 ```bash
-git clone https://github.com/sethmwatson-personal/SS-self-hosting.git
+git clone https://github.com/moaraio/SS-self-hosting.git
 cd SS-self-hosting
 ```
 ### 2. Set Up a Python Virtual Environment
