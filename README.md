@@ -31,6 +31,7 @@ SS-self-hosting/
 ├── requirements.txt             # Python package dependencies at the project root
 ├── README.md                    # Comprehensive setup and usage instructions
 ├── LICENSE                      # License for the repository
+├── samplelines.json             # Example lines from all 10 datasets.
 ```
 
 
