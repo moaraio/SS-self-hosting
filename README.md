@@ -3,7 +3,7 @@
 This repository contains all the code and instructions you'll need to begin your journey on self-hosting data from the Semantic Scholar datasets API using free AWS services. This code is provided by the team at [Moara.io](https://moara.io) as a thank you to Semantic Scholar and Ai2 for their efforts in propelling the world forward. Enjoy building!
 
 These instructions will walk you through:                                                                                                                                                   
-Downloading the Semantic Scholar datasets → Creating searchable tables → Querying the data → Optionally join datasets to create more meaninful views of the datasets.
+Downloading the Semantic Scholar datasets → Creating searchable tables → Querying the data → Optionally join datasets to create more meaningful views of the datasets.
 
 
 ## Prerequisites
@@ -265,8 +265,17 @@ SELECT COUNT(*) FROM webinar.papers;
 
 ### 3. Creating and Editing Queries
 
-You are not limited to the predefined query options in `query_datasets.py` file. You can create your own query functions by adding new queries directly into the script. For instance, you could add more filters, joins, or even aggregate functions to create complex queries that match your specific use cases.
+You are not limited to the predefined query options in `query_datasets.py` file. You can create your own query functions by adding new queries directly into the script. For instance, you could add more filters, join dataset tables together, or even aggregate functions to create complex queries that match your specific use cases.
 
 **TIP: The queries provided in the script have a 'LIMIT' defined to return only a subset of results for efficiency, and the author query uses the 'LIKE' clause to allow partial matches. Get creative and build your own queries by experimenting with different SQL clauses.**
 
 Feel free to modify the script, create as many custom queries as you want, and extend it to suit your needs. Alternatively, you can create and save custom queries using the Athena UI for a more visual approach.
+
+## Semantic Scholar API official documentation and additional resources
+
+If you have concerns or feedback specific to this library, feel free to [open an issue](https://github.com/moaraio/SS-self-hosting/issues). However, the official documentation provides additional resources for broader API-related issues.
+
+- For details on Semantic Scholar APIs capabilities and limits, [go to the official documentation](https://api.semanticscholar.org/api-docs/datasets).
+- The [Frequently Asked Questions](https://www.semanticscholar.org/faq) page also provides helpful content if you need a better understanding of data fetched from Semantic Scholar services.
+- This [official GitHub repository](https://github.com/allenai/s2-folks) allows users to report issues and suggest improvements.
+- There is also a community on [Slack](https://join.slack.com/t/semanticschol-xyj3882/shared_invite/zt-2e98pwubp-vzoxaTgITyurw~~WK1OntQ). Highly recommend!
