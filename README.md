@@ -103,7 +103,7 @@ Once your AWS account is created, follow these steps to create an IAM user with 
 
 #### Step 4: Review and Create User
 
-1. Review the details of the user and make sure the correct policies are attached: `AmazonS3FullAccess` and `AmazonDynamoDBFullAccess`.
+1. Review the details of the user and make sure the correct policies are attached: `AmazonS3FullAccess` and `AmazonAthenaFullAccess`.
 2. Click **Create User**.
 
 #### Step 5: Add programatic access to the user
