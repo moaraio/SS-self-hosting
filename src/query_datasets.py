@@ -53,7 +53,7 @@ def get_query_results(query_execution_id):
 # Query to find papers by field of study. 
 def query_papers_by_field_of_study(field_of_study):
     query = f'''
-        SELECT p.title, p.authors, p.journal.name, p.year
+        SELECT DISTINCT p.title, p.authors, p.journal.name, p.year
         FROM {DATABASE}.{TABLE} p, UNNEST(p.s2fieldsofstudy) AS t (field)
         WHERE field.category = '{field_of_study}'
         LIMIT 5;
@@ -68,7 +68,7 @@ def query_papers_by_field_of_study(field_of_study):
 # Query to find papers by author. This uses the 'LIKE' to allow partial matches
 def query_papers_by_author(author_name):
     query = f'''
-        SELECT p.title, p.authors, p.journal.name, p.year
+        SELECT DISTINCT p.title, p.authors, p.journal.name, p.year
         FROM {DATABASE}.{TABLE} p, UNNEST(p.authors) AS t (author)
         WHERE author.name LIKE '%{author_name}%'
         LIMIT 5;
@@ -82,7 +82,7 @@ def query_papers_by_author(author_name):
 # Query to find papers by journal.
 def query_papers_by_journal(journal_name):
     query = f'''
-        SELECT p.title, p.authors, p.journal.name, p.year
+        SELECT DISTINCT p.title, p.authors, p.journal.name, p.year
         FROM {DATABASE}.{TABLE} p
         WHERE p.journal.name = '{journal_name}'
         LIMIT 5;
